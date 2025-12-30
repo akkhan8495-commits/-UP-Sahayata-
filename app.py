@@ -64,9 +64,26 @@ with st.form("feedback_form", clear_on_submit=True):
     msg_input = st.text_area("Message / संदेश")
     submit_btn = st.form_submit_button("Submit / भेजें")
     
-    if submit_btn:
-        if msg_input:
-            # This confirms the form is working
-            st.success("Dhanyawad! Your message has been recorded. / धन्यवाद! आपका संदेश रिकॉर्ड कर लिया गया है।")
-        else:
-            st.warning("Please enter a message / कृपया संदेश लिखें")
+    import requests
+
+# ... (inside your feedback form code)
+
+if submit_btn:
+    if msg_input:
+        # This is the "Bridge" to your Google Form
+        FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfazpYpjDE25tlhfAkjc7-U5IgABQFSQw2WKMh2SNvCAAcarg/formResponse"
+        
+        # Mapping your app inputs to the Google Form fields
+        form_data = {
+            "entry.2064104780": name_input,  # Name
+            "entry.1764614278": msg_input    # Message/Feedback
+        }
+        
+        try:
+            # This "pushes" the data to the form, which sends it to your sheet
+            requests.post(FORM_URL, data=form_data)
+            st.success("Dhanyawad! Your feedback has been sent to the spreadsheet. / धन्यवाद! आपका सुझाव भेज दिया गया है।")
+        except:
+            st.error("Technical error. Please try again later. / तकनीकी त्रुटि, कृपया बाद में प्रयास करें।")
+    else:
+        st.warning("Please enter a message / कृपया संदेश लिखें")
