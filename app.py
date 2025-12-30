@@ -55,38 +55,30 @@ if st.button("Find My Schemes"):
 
 st.divider()
 
-# SAFE FEEDBACK SECTION (No personal contact info)
+# SAFE FEEDBACK SECTION
 st.subheader("📝 Give Feedback / सुझाव दें")
-st.write("Please leave your suggestions or questions below. / कृपया अपने सुझाव या प्रश्न नीचे लिखें।")
 
 with st.form("feedback_form", clear_on_submit=True):
     name_input = st.text_input("Name (Optional) / नाम")
     msg_input = st.text_area("Message / संदेश")
     submit_btn = st.form_submit_button("Submit / भेजें")
     
-    import requests
-
-# ... (inside your feedback form code)
-
-if submit_btn:
-    if msg_input:
-        # This is the "Bridge" to your Google Form
-        FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfazpYpjDE25tlhfAkjc7-U5IgABQFSQw2WKMh2SNvCAAcarg/formResponse"
-        
-        # Mapping your app inputs to the Google Form fields
-        form_data = {
-            "entry.2064104780": name_input,  # Name
-            "entry.1764614278": msg_input    # Message/Feedback
-        }
-        
-        try:
-            # Note the '/formResponse' at the end of the link
-            requests.post("https://docs.google.com/forms/d/e/1FAIpQLSfazpYpjDE25tlhfAkjc7-U5IgABQFSQw2WKMh2SNvCAAcarg/formResponse", 
-                          data={"entry.2064104780": name_input, "entry.1764614278": msg_input})
-            st.success("Sent! / भेज दिया गया!")
-        except:
-            st.error("Error / त्रुटि")
-    else:
-        st.warning("Please enter a message / कृपया संदेश लिखें")
-
-
+    if submit_btn:
+        if msg_input:
+            import requests
+            # This is your unique bridge to the spreadsheet
+            FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfazpYpjDE25tlhfAkjc7-U5IgABQFSQw2WKMh2SNvCAAcarg/formResponse"
+            
+            # Using the exact entry IDs we found for your form
+            form_data = {
+                "entry.2064104780": name_input,
+                "entry.1764614278": msg_input
+            }
+            
+            try:
+                requests.post(FORM_URL, data=form_data)
+                st.success("Dhanyawad! Check the 'Form Responses 1' tab in your sheet.")
+            except:
+                st.error("Connection error. Please check your internet.")
+        else:
+            st.warning("Please enter a message / कृपया संदेश लिखें")
