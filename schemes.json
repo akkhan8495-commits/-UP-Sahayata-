@@ -1,0 +1,32 @@
+[
+    {
+        "name": "UP Post-Matric Scholarship (SC/ST/Minority)",
+        "min_age": 16,
+        "max_income": 250000,
+        "benefit": "Reimbursement of tuition fees + monthly allowance (₹230 - ₹1200)",
+        "docs": ["Aadhaar Card", "Income Certificate", "Caste Certificate", "Marksheet"]
+    },
+    {
+        "name": "Laxman / Rani Laxmi Bai Award (Sports)",
+        "min_age": 18,
+        "target_group": "athlete",
+        "benefit": "₹3,11,000 cash prize, bronze statue, and a citation",
+        "docs": ["UP Domicile Certificate", "Medal/Participation Records", "Aadhaar Card"],
+        "max_income": 9999999
+    },
+    {
+        "name": "E-Shram Card Benefits",
+        "min_age": 16,
+        "max_age": 59,
+        "max_income": 200000,
+        "benefit": "₹2 Lakh accident insurance & monthly pension after 60 (if enrolled in PM-SYM)",
+        "docs": ["Aadhaar linked with Mobile", "Bank Passbook"]
+    },
+    {
+        "name": "Marriage Incentive for Disabled",
+        "min_age": 18,
+        "max_income": 200000,
+        "benefit": "₹15,000 to ₹35,000 for couples with disabilities",
+        "docs": ["Disability Certificate (40% min)", "Marriage Registration", "Aadhaar"]
+    }
+]
