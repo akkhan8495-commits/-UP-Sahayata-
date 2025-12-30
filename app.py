@@ -55,24 +55,18 @@ if st.button("Find My Schemes"):
 
 st.divider()
 
-# 1. WHATSAPP BUTTON (Simplified to prevent errors)
-my_num = "919999999999" # Change this to your real number
-wa_link = f"https://wa.me/{my_num}?text=Help%20with%20UP%20App"
-
-st.link_button("💬 Chat with me on WhatsApp / व्हाट्सएप पर बात करें", wa_link)
-
-st.divider()
-
-# 2. FEEDBACK SECTION (Always Visible)
+# SAFE FEEDBACK SECTION (No personal contact info)
 st.subheader("📝 Give Feedback / सुझाव दें")
+st.write("Please leave your suggestions or questions below. / कृपया अपने सुझाव या प्रश्न नीचे लिखें।")
+
 with st.form("feedback_form", clear_on_submit=True):
-    name_input = st.text_input("Name / नाम")
+    name_input = st.text_input("Name (Optional) / नाम")
     msg_input = st.text_area("Message / संदेश")
     submit_btn = st.form_submit_button("Submit / भेजें")
     
     if submit_btn:
         if msg_input:
             # This confirms the form is working
-            st.success("Dhanyawad! Your feedback is recorded.")
+            st.success("Dhanyawad! Your message has been recorded. / धन्यवाद! आपका संदेश रिकॉर्ड कर लिया गया है।")
         else:
             st.warning("Please enter a message / कृपया संदेश लिखें")
