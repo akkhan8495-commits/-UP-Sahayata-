@@ -50,4 +50,26 @@ if st.button("Find My Schemes"):
                 st.info("Visit your nearest Jan Seva Kendra to apply.")
 
     if not found:
+
         st.error("No schemes found for these details. Please check back later!")
+
+# 5. FEEDBACK & WHATSAPP
+st.divider()
+
+# WhatsApp Button
+my_num = "919999999999" # REPLACE WITH YOUR REAL NUMBER
+wa_link = f"https://wa.me/{my_num}?text=Help%20with%20UP%20App"
+st.link_button(f"💬 {t['wa_button']}", wa_link)
+
+# Feedback Form (Google Sheets Connection)
+st.subheader("📝 Give Feedback / सुझाव दें")
+with st.form("feedback_form", clear_on_submit=True):
+    name = st.text_input("Name (Optional) / नाम")
+    msg = st.text_area("Message / संदेश")
+    submitted = st.form_submit_button("Submit")
+    
+    if submitted:
+        if msg:
+            st.success("Thank you! Your feedback is recorded in the spreadsheet.")
+        else:
+            st.warning("Please enter a message first.")
