@@ -79,11 +79,13 @@ if submit_btn:
             "entry.1764614278": msg_input    # Message/Feedback
         }
         
-        try:
-            # This "pushes" the data to the form, which sends it to your sheet
-            requests.post(FORM_URL, data=form_data)
-            st.success("Dhanyawad! Your feedback has been sent to the spreadsheet. / धन्यवाद! आपका सुझाव भेज दिया गया है।")
+       try:
+            # Note the '/formResponse' at the end of the link
+            requests.post("https://docs.google.com/forms/d/e/1FAIpQLSfazpYpjDE25tlhfAkjc7-U5IgABQFSQw2WKMh2SNvCAAcarg/formResponse", 
+                          data={"entry.2064104780": name_input, "entry.1764614278": msg_input})
+            st.success("Sent! / भेज दिया गया!")
         except:
-            st.error("Technical error. Please try again later. / तकनीकी त्रुटि, कृपया बाद में प्रयास करें।")
+            st.error("Error / त्रुटि")
     else:
         st.warning("Please enter a message / कृपया संदेश लिखें")
+
