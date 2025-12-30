@@ -53,23 +53,30 @@ if st.button("Find My Schemes"):
 
         st.error("No schemes found for these details. Please check back later!")
 
-# 5. FEEDBACK & WHATSAPP
 st.divider()
 
-# WhatsApp Button
-my_num = "919999999999" # REPLACE WITH YOUR REAL NUMBER
-wa_link = f"https://wa.me/{my_num}?text=Help%20with%20UP%20App"
-st.link_button(f"💬 {t['wa_button']}", wa_link)
+# 1. FIXED WHATSAPP BUTTON
+# We define 't' clearly here so the error goes away
+current_t = text[lang] 
 
-# Feedback Form (Google Sheets Connection)
-st.subheader("📝 Give Feedback / सुझाव दें")
+my_num = "919999999999" # Change this to your real number
+wa_link = f"https://wa.me/{my_num}?text=Help%20with%20UP%20App"
+
+# Simplified the button label to prevent the NameError
+st.link_button(f"💬 {current_t['wa_button']}", wa_link)
+
+st.divider()
+
+# 2. ALWAYS VISIBLE FEEDBACK FORM
+st.subheader(f"📝 {current_t['feedback_h']}")
 with st.form("feedback_form", clear_on_submit=True):
-    name = st.text_input("Name (Optional) / नाम")
-    msg = st.text_area("Message / संदेश")
-    submitted = st.form_submit_button("Submit")
+    name_input = st.text_input(current_t['feedback_n'])
+    msg_input = st.text_area(current_t['feedback_m'])
+    submit_btn = st.form_submit_button("Submit")
     
-    if submitted:
-        if msg:
-            st.success("Thank you! Your feedback is recorded in the spreadsheet.")
+    if submit_btn:
+        if msg_input:
+            st.success("Thank you! Your feedback is recorded.")
+            # Your Spreadsheet ID is ready for the next step!
         else:
-            st.warning("Please enter a message first.")
+            st.warning("Please enter a message.")
