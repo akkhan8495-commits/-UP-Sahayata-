@@ -79,7 +79,7 @@ if submit_btn:
             "entry.1764614278": msg_input    # Message/Feedback
         }
         
-       try:
+        try:
             # Note the '/formResponse' at the end of the link
             requests.post("https://docs.google.com/forms/d/e/1FAIpQLSfazpYpjDE25tlhfAkjc7-U5IgABQFSQw2WKMh2SNvCAAcarg/formResponse", 
                           data={"entry.2064104780": name_input, "entry.1764614278": msg_input})
@@ -88,4 +88,5 @@ if submit_btn:
             st.error("Error / त्रुटि")
     else:
         st.warning("Please enter a message / कृपया संदेश लिखें")
+
 
