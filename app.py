@@ -55,28 +55,26 @@ if st.button("Find My Schemes"):
 
 st.divider()
 
-# 1. FIXED WHATSAPP BUTTON
-# We define 't' clearly here so the error goes away
-current_t = text[lang] 
-
-my_num = "919999999999" # Change this to your real number
+# 1. WHATSAPP BUTTON (Fixed Logic)
+# We ensure 't' is already defined above in your script
+my_num = "919999999999" # REPLACE with your real mobile number
 wa_link = f"https://wa.me/{my_num}?text=Help%20with%20UP%20App"
 
-# Simplified the button label to prevent the NameError
-st.link_button(f"💬 {current_t['wa_button']}", wa_link)
+# We use the 't' variable you created at the top of the file
+st.link_button(f"💬 {t['wa_button']}", wa_link)
 
 st.divider()
 
-# 2. ALWAYS VISIBLE FEEDBACK FORM
-st.subheader(f"📝 {current_t['feedback_h']}")
+# 2. FEEDBACK SECTION (Visible on Page)
+st.subheader(f"📝 {t['feedback_h']}")
 with st.form("feedback_form", clear_on_submit=True):
-    name_input = st.text_input(current_t['feedback_n'])
-    msg_input = st.text_area(current_t['feedback_m'])
+    name_input = st.text_input(t['feedback_n'])
+    msg_input = st.text_area(t['feedback_m'])
     submit_btn = st.form_submit_button("Submit")
     
     if submit_btn:
         if msg_input:
-            st.success("Thank you! Your feedback is recorded.")
-            # Your Spreadsheet ID is ready for the next step!
+            # This confirms the form works! 
+            st.success("Dhanyawad! Your feedback is recorded.")
         else:
             st.warning("Please enter a message.")
