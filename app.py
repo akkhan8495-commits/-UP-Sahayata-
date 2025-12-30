@@ -55,26 +55,24 @@ if st.button("Find My Schemes"):
 
 st.divider()
 
-# 1. WHATSAPP BUTTON (Fixed Logic)
-# We ensure 't' is already defined above in your script
-my_num = "919999999999" # REPLACE with your real mobile number
+# 1. WHATSAPP BUTTON (Simplified to prevent errors)
+my_num = "919999999999" # Change this to your real number
 wa_link = f"https://wa.me/{my_num}?text=Help%20with%20UP%20App"
 
-# We use the 't' variable you created at the top of the file
-st.link_button(f"💬 {t['wa_button']}", wa_link)
+st.link_button("💬 Chat with me on WhatsApp / व्हाट्सएप पर बात करें", wa_link)
 
 st.divider()
 
-# 2. FEEDBACK SECTION (Visible on Page)
-st.subheader(f"📝 {t['feedback_h']}")
+# 2. FEEDBACK SECTION (Always Visible)
+st.subheader("📝 Give Feedback / सुझाव दें")
 with st.form("feedback_form", clear_on_submit=True):
-    name_input = st.text_input(t['feedback_n'])
-    msg_input = st.text_area(t['feedback_m'])
-    submit_btn = st.form_submit_button("Submit")
+    name_input = st.text_input("Name / नाम")
+    msg_input = st.text_area("Message / संदेश")
+    submit_btn = st.form_submit_button("Submit / भेजें")
     
     if submit_btn:
         if msg_input:
-            # This confirms the form works! 
+            # This confirms the form is working
             st.success("Dhanyawad! Your feedback is recorded.")
         else:
-            st.warning("Please enter a message.")
+            st.warning("Please enter a message / कृपया संदेश लिखें")
