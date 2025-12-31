@@ -1,7 +1,7 @@
 import streamlit as st
 import json
 from datetime import datetime
-
+import streamlit.components.v1 as components
 
 # --- 1. CONFIG & SECURITY SHIELD ---
 st.set_page_config(page_title="UP Sahayata", page_icon="🇮🇳", layout="centered")
@@ -77,4 +77,5 @@ with tab2:
     st.title("Legal & Privacy")
     st.markdown(f"**Updated:** {datetime.now().strftime('%d %B %Y')}")
     st.write("This is a private information portal compliant with DPDP Act 2025.")
+
 
