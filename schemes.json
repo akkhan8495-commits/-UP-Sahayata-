@@ -6,8 +6,8 @@
         "benefit": "Accidental insurance of ₹2 Lakh and eligibility for future government pensions.",
         "docs": ["Aadhaar Card", "Bank Passbook"],
         "doc_images": {
-            "Aadhaar Card": "https://cdn-icons-png.flaticon.com/128/747/747376.png",
-            "Bank Passbook": "https://cdn-icons-png.flaticon.com/128/2830/2830284.png"
+            "Aadhaar Card": "https://upload.wikimedia.org/wikipedia/en/c/cf/Aadhaar_Logo.svg",
+            "Bank Passbook": "https://cdn-icons-png.flaticon.com/512/2830/2830284.png"
         }
     },
     {
@@ -17,9 +17,9 @@
         "benefit": "Financial grant of up to ₹35,000 for the marriage of disabled couples.",
         "docs": ["Disability Certificate", "Marriage Certificate", "Income Certificate"],
         "doc_images": {
-            "Disability Certificate": "https://cdn-icons-png.flaticon.com/128/3100/3100063.png",
-            "Marriage Certificate": "https://cdn-icons-png.flaticon.com/128/3690/3690130.png",
-            "Income Certificate": "https://cdn-icons-png.flaticon.com/128/2460/2460453.png"
+            "Disability Certificate": "https://img.icons8.com/color/144/disability.png",
+            "Marriage Certificate": "https://img.icons8.com/fluency/144/certificate.png",
+            "Income Certificate": "https://img.icons8.com/color/144/rupee.png"
         }
     },
     {
@@ -29,9 +29,9 @@
         "benefit": "Free Tablet or Smartphone for students pursuing higher education.",
         "docs": ["Aadhaar Card", "College ID", "Ration Card"],
         "doc_images": {
-            "Aadhaar Card": "https://cdn-icons-png.flaticon.com/128/747/747376.png",
-            "College ID": "https://cdn-icons-png.flaticon.com/128/1940/1940611.png",
-            "Ration Card": "https://cdn-icons-png.flaticon.com/128/3050/3050230.png"
+            "Aadhaar Card": "https://upload.wikimedia.org/wikipedia/en/c/cf/Aadhaar_Logo.svg",
+            "College ID": "https://img.icons8.com/plasticine/144/student-registration.png",
+            "Ration Card": "https://img.icons8.com/color/144/food-receiver.png"
         }
     },
     {
@@ -41,9 +41,9 @@
         "benefit": "Monthly financial assistance of ₹1000 directly to bank account.",
         "docs": ["Aadhaar Card", "Bank Passbook", "Caste Certificate"],
         "doc_images": {
-            "Aadhaar Card": "https://cdn-icons-png.flaticon.com/128/747/747376.png",
-            "Bank Passbook": "https://cdn-icons-png.flaticon.com/128/2830/2830284.png",
-            "Caste Certificate": "https://cdn-icons-png.flaticon.com/128/1041/1041916.png"
+            "Aadhaar Card": "https://upload.wikimedia.org/wikipedia/en/c/cf/Aadhaar_Logo.svg",
+            "Bank Passbook": "https://cdn-icons-png.flaticon.com/512/2830/2830284.png",
+            "Caste Certificate": "https://img.icons8.com/color/144/test-results.png"
         }
     }
 ]
