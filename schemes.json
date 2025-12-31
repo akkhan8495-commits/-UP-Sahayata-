@@ -1,41 +1,49 @@
 [
     {
-        "name": "UP Post-Matric Scholarship (SC/ST/Minority)",
+        "name": "E-Shram Card (ई-श्रम कार्ड)",
         "min_age": 16,
-        "max_income": 250000,
-        "benefit": "Reimbursement of tuition fees + monthly allowance (₹230 - ₹1200)",
-        "docs": ["Aadhaar Card", "Income Certificate", "Caste Certificate", "Marksheet"]
-    },
-    {
-        "name": "Laxman / Rani Laxmi Bai Award (Sports)",
-        "min_age": 18,
-        "target_group": "athlete",
-        "benefit": "₹3,11,000 cash prize, bronze statue, and a citation",
-        "docs": ["UP Domicile Certificate", "Medal/Participation Records", "Aadhaar Card"],
-        "max_income": 9999999
-    },
-    {
-        "name": "E-Shram Card Benefits",
-        "min_age": 16,
-        "max_age": 59,
-        "max_income": 200000,
-        "benefit": "₹2 Lakh accident insurance & monthly pension after 60 (if enrolled in PM-SYM)",
-        "docs": ["Aadhaar linked with Mobile", "Bank Passbook"]
+        "max_income": 1000000,
+        "benefit": "Accidental insurance of ₹2 Lakh and eligibility for future government pensions.",
+        "docs": ["Aadhaar Card", "Bank Passbook"],
         "doc_images": {
             "Aadhaar Card": "https://img.icons8.com/color/144/identity-column.png",
             "Bank Passbook": "https://img.icons8.com/color/144/passbook.png"
         }
     },
     {
-        "name": "Marriage Incentive for Disabled",
+        "name": "Marriage Incentive for Disabled (दिव्यांग शादी प्रोत्साहन)",
         "min_age": 18,
-        "max_income": 200000,
-        "benefit": "₹15,000 to ₹35,000 for couples with disabilities",
+        "max_income": 60000,
+        "benefit": "Financial grant of up to ₹35,000 for the marriage of disabled couples.",
         "docs": ["Disability Certificate", "Marriage Certificate", "Income Certificate"],
         "doc_images": {
             "Disability Certificate": "https://img.icons8.com/color/144/disability.png",
             "Marriage Certificate": "https://img.icons8.com/color/144/wedding-certificate.png",
             "Income Certificate": "https://img.icons8.com/color/144/rupee.png"
         }
-
+    },
+    {
+        "name": "UP Free Tablet/Smartphone Scheme",
+        "min_age": 18,
+        "max_income": 200000,
+        "benefit": "Free Tablet or Smartphone for students pursuing higher education.",
+        "docs": ["Aadhaar Card", "College ID", "Ration Card"],
+        "doc_images": {
+            "Aadhaar Card": "https://img.icons8.com/color/144/identity-column.png",
+            "College ID": "https://img.icons8.com/color/144/student-registration.png",
+            "Ration Card": "https://img.icons8.com/color/144/food-receiver.png"
+        }
+    },
+    {
+        "name": "Old Age Pension (वृद्धावस्था पेंशन)",
+        "min_age": 60,
+        "max_income": 46080,
+        "benefit": "Monthly financial assistance of ₹1000 directly to bank account.",
+        "docs": ["Aadhaar Card", "Bank Passbook", "Caste Certificate"],
+        "doc_images": {
+            "Aadhaar Card": "https://img.icons8.com/color/144/identity-column.png",
+            "Bank Passbook": "https://img.icons8.com/color/144/passbook.png",
+            "Caste Certificate": "https://img.icons8.com/color/144/test-results.png"
+        }
+    }
 ]
