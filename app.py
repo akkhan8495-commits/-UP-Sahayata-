@@ -2,6 +2,15 @@ import streamlit as st
 import json
 import requests
 
+if 'search_clicked' not in st.session_state:
+    st.session_state.search_clicked = False
+
+if st.button(t['button']):
+    st.session_state.search_clicked = True
+
+if st.session_state.search_clicked:
+    # Place all your Scheme Search Logic (the loops) here
+
 # 1. DATABASE SETUP
 def load_data():
     try:
@@ -85,7 +94,7 @@ if st.button(t['button']):
                         with doc_cols[i]:
                             if "doc_images" in s and d in s["doc_images"]:
                                 # Added use_column_width to make sure it displays
-                                st.image(s["doc_images"][d], width=70, use_column_width=False)
+                                st.image(s["doc_images"][d], width=80, caption=d) # Added 'caption'
                             st.checkbox(d, key=f"chk_{s['name']}_{d}") # Unique key
 
 # 5. SAFE FEEDBACK SECTION
@@ -112,4 +121,5 @@ with st.form("feedback_form", clear_on_submit=True):
                 st.error("Error connecting to sheet.")
         else:
             st.warning("Please enter a message.")
+
 
