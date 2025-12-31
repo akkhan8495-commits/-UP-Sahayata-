@@ -1,3 +1,14 @@
+st.set_page_config(page_title="UP Sahayata", page_icon="🇮🇳", layout="centered")
+
+# CSS to hide the GitHub icon, the 'Made with Streamlit' footer, and the Main Menu
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 import streamlit as st
 import json
 from datetime import datetime
@@ -72,3 +83,4 @@ with tab2:
 # --- 3. PERMANENT FOOTER ---
 st.markdown("---")
 st.markdown("<p style='text-align:center; color:gray; font-size:12px;'>Private Portal | Not Government Official | 2026</p>", unsafe_allow_html=True)
+
