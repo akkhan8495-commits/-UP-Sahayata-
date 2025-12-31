@@ -60,34 +60,33 @@ with col2:
     is_widow = st.radio(t['widow'], ["No", "Yes"])
 
 # 4. SEARCH LOGIC
+# Create a space for results that stays visible
+results_container = st.container()
+
 if st.button(t['button']):
     schemes = load_data()
     found = False
-    for s in schemes:
-        eligible = True
-        if "min_age" in s and age < s['min_age']: eligible = False
-        if income > s['max_income']: eligible = False
-        if "gender_target" in s and gender.lower() != s["gender_target"]: eligible = False
-        
-        if eligible:
-            found = True
-            with st.expander(f"✅ {s['name']}"):
-                st.info(f"**Benefit:** {s['benefit']}")
-                st.write(f"### {t['docs']}")
-                
-                # FEATURE: Document Images & Checklist
-                doc_cols = st.columns(len(s['docs']))
-                for i, d in enumerate(s['docs']):
-                    with doc_cols[i]:
-                        # Show image if it exists in JSON
-                        if "doc_images" in s and d in s["doc_images"]:
-                            st.image(s["doc_images"][d], width=80)
-                        st.checkbox(d, key=f"{s['name']}_{d}")
-                
-                st.warning("Visit your nearest Jan Seva Kendra with these documents.")
-
-    if not found:
-        st.error("No schemes found for your profile.")
+    
+    with results_container: # This keeps everything inside the box
+        for s in schemes:
+            eligible = True
+            if "min_age" in s and age < s['min_age']: eligible = False
+            if income > s['max_income']: eligible = False
+            
+            if eligible:
+                found = True
+                with st.expander(f"✅ {s['name']}", expanded=True): # Keeps it open
+                    st.info(f"**Benefit:** {s['benefit']}")
+                    
+                    st.write(f"### {t['docs']}")
+                    doc_cols = st.columns(len(s['docs']))
+                    
+                    for i, d in enumerate(s['docs']):
+                        with doc_cols[i]:
+                            if "doc_images" in s and d in s["doc_images"]:
+                                # Added use_column_width to make sure it displays
+                                st.image(s["doc_images"][d], width=70, use_column_width=False)
+                            st.checkbox(d, key=f"chk_{s['name']}_{d}") # Unique key
 
 # 5. SAFE FEEDBACK SECTION
 st.divider()
@@ -113,3 +112,4 @@ with st.form("feedback_form", clear_on_submit=True):
                 st.error("Error connecting to sheet.")
         else:
             st.warning("Please enter a message.")
+
