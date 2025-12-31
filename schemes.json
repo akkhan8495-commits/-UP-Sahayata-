@@ -1,39 +1,39 @@
 [
   {
-    "name": "Kanya Sumangala Yojana (Revised 2025)",
-    "min_age": 0,
-    "max_income": 300000,
-    "benefit": "Total financial aid of ₹15,000 to ₹25,000 provided in 6 phases for girl child birth, vaccination, and education.",
-    "docs": ["Aadhaar Card", "Bank Passbook", "Income Certificate", "Birth Certificate"],
-    "doc_images": {
-      "Aadhaar Card": "https://raw.githubusercontent.com/akkhan8495-commits/-UP-Sahayata-/refs/heads/main/aadhaar.png",
-      "Bank Passbook": "https://raw.githubusercontent.com/akkhan8495-commits/-UP-Sahayata-/refs/heads/main/passbook.png",
-      "Income Certificate": "https://img.icons8.com/color/144/rupee.png",
-      "Birth Certificate": "https://img.icons8.com/color/144/baby-feet.png"
-    }
-  },
-  {
-    "name": "UP Bijli Bill Rahat Yojana 2025",
+    "name": "VB-GRAM (Viksit Bharat Rozgar Mission) 2025",
     "min_age": 18,
-    "max_income": 200000,
-    "benefit": "Significant discounts on pending electricity bills and 100% interest waiver for rural domestic consumers.",
-    "docs": ["Aadhaar Card", "Bank Passbook", "Old Electricity Bill"],
+    "max_income": 150000,
+    "benefit": "Guaranteed 125 days of wage employment per year (increased from 100) with weekly payments and a technology-driven national infrastructure stack.",
+    "docs": ["Aadhaar Card", "e-Shram Card", "Bank Passbook"],
     "doc_images": {
       "Aadhaar Card": "https://raw.githubusercontent.com/akkhan8495-commits/-UP-Sahayata-/refs/heads/main/aadhaar.png",
-      "Bank Passbook": "https://raw.githubusercontent.com/akkhan8495-commits/-UP-Sahayata-/refs/heads/main/passbook.png",
-      "Old Electricity Bill": "https://img.icons8.com/color/144/electricity.png"
+      "e-Shram Card": "https://img.icons8.com/color/144/worker-beard.png",
+      "Bank Passbook": "https://raw.githubusercontent.com/akkhan8495-commits/-UP-Sahayata-/refs/heads/main/passbook.png"
     }
   },
   {
-    "name": "UP Old Age Pension (Revised)",
-    "min_age": 60,
-    "max_income": 56460,
-    "benefit": "Monthly pension of ₹1000 transferred directly to the bank accounts of elderly citizens.",
-    "docs": ["Aadhaar Card", "Bank Passbook", "Age Certificate"],
+    "name": "UP Backward Classes Computer Training 2025",
+    "min_age": 18,
+    "max_income": 100000,
+    "benefit": "Free O-Level and CCC computer certification training for OBC/EBC youth to enhance digital employability in the modern job market.",
+    "docs": ["Aadhaar Card", "Caste Certificate", "10th Marksheet", "Income Certificate"],
+    "doc_images": {
+      "Aadhaar Card": "https://raw.githubusercontent.com/akkhan8495-commits/-UP-Sahayata-/refs/heads/main/aadhaar.png",
+      "Caste Certificate": "https://img.icons8.com/color/144/groups.png",
+      "10th Marksheet": "https://img.icons8.com/color/144/diploma.png",
+      "Income Certificate": "https://img.icons8.com/color/144/rupee.png"
+    }
+  },
+  {
+    "name": "PM Viksit Bharat Rozgar Yojana (First-Timer)",
+    "min_age": 18,
+    "max_income": 180000,
+    "benefit": "One-time direct wage incentive of up to ₹15,000 for first-time employees entering the formal workforce.",
+    "docs": ["Aadhaar Card", "Bank Passbook", "Employment Letter"],
     "doc_images": {
       "Aadhaar Card": "https://raw.githubusercontent.com/akkhan8495-commits/-UP-Sahayata-/refs/heads/main/aadhaar.png",
       "Bank Passbook": "https://raw.githubusercontent.com/akkhan8495-commits/-UP-Sahayata-/refs/heads/main/passbook.png",
-      "Age Certificate": "https://img.icons8.com/color/144/calendar.png"
+      "Employment Letter": "https://img.icons8.com/color/144/contract.png"
     }
   }
 ]
