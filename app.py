@@ -79,3 +79,4 @@ with tab2:
     st.write("This is a private information portal compliant with DPDP Act 2025.")
 
 
+
