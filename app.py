@@ -50,9 +50,19 @@ with st.form("feedback", clear_on_submit=True):
     m = st.text_area("Message / संदेश")
     if st.form_submit_button("Submit"):
         if m:
+            # Your specific Google Form URL
             url = "https://docs.google.com/forms/d/e/1FAIpQLSfazpYpjDE25tlhfAkjc7-U5IgABQFSQw2WKMh2SNvCAAcarg/formResponse"
+            
+            # These IDs match the 'entry.' numbers from your pre-filled link
+            form_data = {
+                "entry.1578076983": n, 
+                "entry.518901436": m
+            }
+            
             try:
-                requests.post(url, data={"entry.2064104780": n, "entry.1764614278": m})
-                st.success("Success! Data sent to Spreadsheet.")
+                requests.post(url, data=form_data)
+                st.success("Success! Your message is now in the Spreadsheet. / सफलता! आपका संदेश स्प्रेडशीट में है।")
             except:
-                st.error("Technical Error.")
+                st.error("Technical Error / तकनीकी खराबी")
+        else:
+            st.warning("Please enter a message / कृपया संदेश लिखें")
