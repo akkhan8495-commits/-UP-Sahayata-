@@ -62,9 +62,10 @@ if st.session_state.show_legal:
     - **No Storage**: We do not store your age/income.
     - **Affiliate**: We use EarnKaro & Amazon tracking cookies.
     - **Amazon**: As an Amazon Associate, I earn from qualifying purchases.
-    - **Contact**: your-email@gmail.com
+    - **Contact**: akkhan8495@gmail.com
     *Updated: {datetime.now().strftime('%d %B %Y')}*
     """)
 
 # --- 6. SIMPLE FOOTER ---
 st.markdown(f"<p style='text-align:center; color:gray; font-size:10px;'>{t['footer']} | 2026</p>", unsafe_allow_html=True)
+
