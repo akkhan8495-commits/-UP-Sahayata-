@@ -6,14 +6,6 @@ import streamlit.components.v1 as components
 # --- 1. CONFIG & SECURITY SHIELD ---
 st.set_page_config(page_title="UP Sahayata", page_icon="🇮🇳", layout="centered")
 
-# --- ADMITAD VERIFICATION CODE ---
-components.html(
-    """
-    <meta name="verify-admitad" content="0f34354b86" />
-    """,
-    height=0,
-)
-
 # Hides all developer buttons from public users
 st.markdown("""
     <style>
