@@ -2,15 +2,6 @@ import streamlit as st
 import json
 import requests
 
-if 'search_clicked' not in st.session_state:
-    st.session_state.search_clicked = False
-
-if st.button(t['button']):
-    st.session_state.search_clicked = True
-
-if st.session_state.search_clicked:
-    # Place all your Scheme Search Logic (the loops) here
-
 # 1. DATABASE SETUP
 def load_data():
     try:
@@ -19,8 +10,12 @@ def load_data():
     except:
         return []
 
-# 2. CONFIGURATION
+# 2. CONFIGURATION & MEMORY
 st.set_page_config(page_title="UP Sahayata", page_icon="🇮🇳")
+
+# This "memory" keeps the results on screen when checkboxes are clicked
+if 'results_visible' not in st.session_state:
+    st.session_state.results_visible = False
 
 text = {
     "English": {
@@ -30,7 +25,6 @@ text = {
         "income": "Annual Family Income (₹)",
         "gender": "Gender",
         "widow": "Are you a widow?",
-        "athlete": "Are you an Athlete?",
         "button": "Find My Schemes",
         "docs": "Required Documents (Checklist):",
         "feedback_h": "Give Feedback",
@@ -44,7 +38,6 @@ text = {
         "income": "वार्षिक आय (₹)",
         "gender": "लिंग",
         "widow": "क्या आप विधवा हैं?",
-        "athlete": "क्या आप खिलाड़ी हैं?",
         "button": "योजनाएं खोजें",
         "docs": "आवश्यक दस्तावेज (चेकलिस्ट):",
         "feedback_h": "सुझाव दें",
@@ -69,35 +62,38 @@ with col2:
     is_widow = st.radio(t['widow'], ["No", "Yes"])
 
 # 4. SEARCH LOGIC
-# Create a space for results that stays visible
-results_container = st.container()
-
 if st.button(t['button']):
+    st.session_state.results_visible = True
+
+if st.session_state.results_visible:
     schemes = load_data()
     found = False
-    
-    with results_container: # This keeps everything inside the box
-        for s in schemes:
-            eligible = True
-            if "min_age" in s and age < s['min_age']: eligible = False
-            if income > s['max_income']: eligible = False
-            
-            if eligible:
-                found = True
-                with st.expander(f"✅ {s['name']}", expanded=True): # Keeps it open
-                    st.info(f"**Benefit:** {s['benefit']}")
-                    
-                    st.write(f"### {t['docs']}")
-                    doc_cols = st.columns(len(s['docs']))
-                    
-                    for i, d in enumerate(s['docs']):
-                        with doc_cols[i]:
-                            if "doc_images" in s and d in s["doc_images"]:
-                                # Added use_column_width to make sure it displays
-                                st.image(s["doc_images"][d], width=80, caption=d) # Added 'caption'
-                            st.checkbox(d, key=f"chk_{s['name']}_{d}") # Unique key
+    for s in schemes:
+        eligible = True
+        if "min_age" in s and age < s['min_age']: eligible = False
+        if income > s['max_income']: eligible = False
+        
+        if eligible:
+            found = True
+            with st.expander(f"✅ {s['name']}", expanded=True):
+                st.info(f"**Benefit:** {s['benefit']}")
+                st.write(f"### {t['docs']}")
+                
+                # FEATURE: Document Images with Captions for clarity
+                doc_cols = st.columns(len(s['docs']))
+                for i, d in enumerate(s['docs']):
+                    with doc_cols[i]:
+                        if "doc_images" in s and d in s["doc_images"]:
+                            # width=90 and caption makes it easier to understand
+                            st.image(s["doc_images"][d], width=90, caption=d)
+                        st.checkbox("Ready", key=f"chk_{s['name']}_{d}")
+                
+                st.warning("Visit your nearest Jan Seva Kendra with these documents.")
 
-# 5. SAFE FEEDBACK SECTION
+    if not found:
+        st.error("No schemes found for your profile.")
+
+# 5. SAFE FEEDBACK SECTION (Sends to 'Form Responses 1' tab)
 st.divider()
 st.subheader(f"📝 {t['feedback_h']}")
 
@@ -108,7 +104,7 @@ with st.form("feedback_form", clear_on_submit=True):
     
     if submit_btn:
         if msg_input:
-            # Your Google Form Bridge 
+            # This links to your specific Google Form and Spreadsheet
             FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfazpYpjDE25tlhfAkjc7-U5IgABQFSQw2WKMh2SNvCAAcarg/formResponse"
             form_data = {
                 "entry.2064104780": name_input,
@@ -119,7 +115,3 @@ with st.form("feedback_form", clear_on_submit=True):
                 st.success("Dhanyawad! Your message is in the 'Form Responses 1' tab.")
             except:
                 st.error("Error connecting to sheet.")
-        else:
-            st.warning("Please enter a message.")
-
-
