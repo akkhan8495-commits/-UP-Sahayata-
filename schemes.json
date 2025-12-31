@@ -6,7 +6,7 @@
     "benefit": "Get 30% to 50% subsidy on modern farm machinery like tractors, rotavators, and solar pumps to reduce manual labor.",
     "docs": ["Aadhaar Card", "Land Possession Certificate (Khatauni)", "Bank Passbook", "Mobile Number"],
     "doc_images": {
-      "Aadhaar Card": "https://img.icons8.com/color/144/identity-matching.png",
+      "Aadhaar Card": "https://raw.githubusercontent.com/akkhan8495-commits/-UP-Sahayata-/refs/heads/main/aadhaar.png",
       "Land Possession Certificate (Khatauni)": "https://img.icons8.com/color/144/land-sales.png",
       "Bank Passbook": "https://img.icons8.com/color/144/bank-card-backside.png",
       "Mobile Number": "https://img.icons8.com/color/144/iphone.png"
@@ -65,3 +65,4 @@
     }
   }
 ]
+
