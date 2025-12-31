@@ -1,39 +1,28 @@
 [
   {
-    "name": "VB-GRAM (Viksit Bharat Rozgar Mission) 2025",
+    "name": "VB-GRAM (Viksit Bharat Rozgar Mission) 2026",
+    "name_hindi": "विकसित भारत रोज़गार मिशन (VB-GRAM) 2026",
     "min_age": 18,
     "max_income": 150000,
-    "benefit": "Guaranteed 125 days of wage employment per year (increased from 100) with weekly payments and a technology-driven national infrastructure stack.",
-    "docs": ["Aadhaar Card", "e-Shram Card", "Bank Passbook"],
+    "benefit": "Guaranteed 125 days of work with weekly digital payments.",
+    "benefit_hindi": "साप्ताहिक डिजिटल भुगतान के साथ 125 दिनों के कार्य की गारंटी।",
+    "docs": ["Aadhaar Card", "Bank Passbook"],
     "doc_images": {
       "Aadhaar Card": "https://raw.githubusercontent.com/akkhan8495-commits/-UP-Sahayata-/refs/heads/main/aadhaar.png",
-      "e-Shram Card": "https://img.icons8.com/color/144/worker-beard.png",
       "Bank Passbook": "https://raw.githubusercontent.com/akkhan8495-commits/-UP-Sahayata-/refs/heads/main/passbook.png"
     }
   },
   {
-    "name": "UP Backward Classes Computer Training 2025",
+    "name": "UP Backward Classes Computer Training 2026",
+    "name_hindi": "यूपी पिछड़ा वर्ग कंप्यूटर प्रशिक्षण योजना 2026",
     "min_age": 18,
     "max_income": 100000,
-    "benefit": "Free O-Level and CCC computer certification training for OBC/EBC youth to enhance digital employability in the modern job market.",
-    "docs": ["Aadhaar Card", "Caste Certificate", "10th Marksheet", "Income Certificate"],
+    "benefit": "Free O-Level and CCC computer certification.",
+    "benefit_hindi": "नि:शुल्क ओ-लेवल और सीसीसी कंप्यूटर प्रमाणन प्रशिक्षण।",
+    "docs": ["Aadhaar Card", "Caste Certificate"],
     "doc_images": {
       "Aadhaar Card": "https://raw.githubusercontent.com/akkhan8495-commits/-UP-Sahayata-/refs/heads/main/aadhaar.png",
-      "Caste Certificate": "https://img.icons8.com/color/144/groups.png",
-      "10th Marksheet": "https://img.icons8.com/color/144/diploma.png",
-      "Income Certificate": "https://img.icons8.com/color/144/rupee.png"
-    }
-  },
-  {
-    "name": "PM Viksit Bharat Rozgar Yojana (First-Timer)",
-    "min_age": 18,
-    "max_income": 180000,
-    "benefit": "One-time direct wage incentive of up to ₹15,000 for first-time employees entering the formal workforce.",
-    "docs": ["Aadhaar Card", "Bank Passbook", "Employment Letter"],
-    "doc_images": {
-      "Aadhaar Card": "https://raw.githubusercontent.com/akkhan8495-commits/-UP-Sahayata-/refs/heads/main/aadhaar.png",
-      "Bank Passbook": "https://raw.githubusercontent.com/akkhan8495-commits/-UP-Sahayata-/refs/heads/main/passbook.png",
-      "Employment Letter": "https://img.icons8.com/color/144/contract.png"
+      "Caste Certificate": "https://img.icons8.com/color/144/groups.png"
     }
   }
 ]
