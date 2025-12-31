@@ -21,12 +21,21 @@
         "max_income": 200000,
         "benefit": "₹2 Lakh accident insurance & monthly pension after 60 (if enrolled in PM-SYM)",
         "docs": ["Aadhaar linked with Mobile", "Bank Passbook"]
+        "doc_images": {
+            "Aadhaar Card": "https://img.icons8.com/color/144/identity-column.png",
+            "Bank Passbook": "https://img.icons8.com/color/144/passbook.png"
+        }
     },
     {
         "name": "Marriage Incentive for Disabled",
         "min_age": 18,
         "max_income": 200000,
         "benefit": "₹15,000 to ₹35,000 for couples with disabilities",
-        "docs": ["Disability Certificate (40% min)", "Marriage Registration", "Aadhaar"]
-    }
+        "docs": ["Disability Certificate", "Marriage Certificate", "Income Certificate"],
+        "doc_images": {
+            "Disability Certificate": "https://img.icons8.com/color/144/disability.png",
+            "Marriage Certificate": "https://img.icons8.com/color/144/wedding-certificate.png",
+            "Income Certificate": "https://img.icons8.com/color/144/rupee.png"
+        }
+
 ]
