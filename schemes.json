@@ -1,65 +1,67 @@
 [
   {
-    "name": "Kanya Sumangala Yojana (Revised 2025)",
-    "min_age": 0,
-    "max_income": 300000,
-    "benefit": "Total financial aid of ₹15,000 to ₹25,000 provided in 6 phases for girl child birth, vaccination, and education.",
-    "docs": ["Aadhaar Card", "Income Certificate", "Residence Proof", "Birth Certificate"],
-    "doc_images": {
-      "Aadhaar Card": "https://img.icons8.com/color/144/identity-matching.png",
-      "Income Certificate": "https://img.icons8.com/color/144/rupee.png",
-      "Residence Proof": "https://img.icons8.com/color/144/home.png",
-      "Birth Certificate": "https://img.icons8.com/color/144/baby-feet.png"
-    }
-  },
-  {
-    "name": "UP Bijli Bill Rahat Yojana 2025",
+    "name": "UP Krishi Upkaran Subsidy 2025",
     "min_age": 18,
-    "max_income": 200000,
-    "benefit": "Significant discounts on pending electricity bills and 100% interest waiver for rural domestic consumers.",
-    "docs": ["Old Electricity Bill", "Aadhaar Card", "Bank Passbook"],
+    "max_income": 400000,
+    "benefit": "Get 30% to 50% subsidy on modern farm machinery like tractors, rotavators, and solar pumps to reduce manual labor.",
+    "docs": ["Aadhaar Card", "Land Possession Certificate (Khatauni)", "Bank Passbook", "Mobile Number"],
     "doc_images": {
-      "Old Electricity Bill": "https://img.icons8.com/color/144/electricity.png",
       "Aadhaar Card": "https://img.icons8.com/color/144/identity-matching.png",
-      "Bank Passbook": "https://img.icons8.com/color/144/bank-card-backside.png"
+      "Land Possession Certificate (Khatauni)": "https://img.icons8.com/color/144/land-sales.png",
+      "Bank Passbook": "https://img.icons8.com/color/144/bank-card-backside.png",
+      "Mobile Number": "https://img.icons8.com/color/144/iphone.png"
     }
   },
   {
-    "name": "Mukhyamantri Yuva Swarojgar Yojana",
+    "name": "Viksit Bharat Rozgar Yojana 2025",
+    "min_age": 18,
+    "max_income": 180000,
+    "benefit": "Direct wage support of ₹15,000 for first-time employees in the manufacturing sector and PF contribution support.",
+    "docs": ["Aadhaar Card", "e-Shram Card", "Bank Passbook", "Appointment Letter"],
+    "doc_images": {
+      "Aadhaar Card": "https://img.icons8.com/color/144/identity-matching.png",
+      "e-Shram Card": "https://img.icons8.com/color/144/worker-beard.png",
+      "Bank Passbook": "https://img.icons8.com/color/144/bank-card-backside.png",
+      "Appointment Letter": "https://img.icons8.com/color/144/contract.png"
+    }
+  },
+  {
+    "name": "Vishwakarma Shram Samman 2025",
+    "min_age": 18,
+    "max_income": 300000,
+    "benefit": "Free advanced toolkits and ₹10,000 to ₹1 Lakh grant for traditional artisans (Carpenters, Tailors, Potters).",
+    "docs": ["Aadhaar Card", "Caste Certificate", "Ration Card", "Skill Training Certificate"],
+    "doc_images": {
+      "Aadhaar Card": "https://img.icons8.com/color/144/identity-matching.png",
+      "Caste Certificate": "https://img.icons8.com/color/144/groups.png",
+      "Ration Card": "https://img.icons8.com/color/144/food-receiver.png",
+      "Skill Training Certificate": "https://img.icons8.com/color/144/diploma.png"
+    }
+  },
+  {
+    "name": "UP PM-KUSUM Solar Pump Scheme",
     "min_age": 18,
     "max_income": 500000,
-    "benefit": "Loan up to ₹25 Lakh for industries and ₹10 Lakh for service sector with 25% government subsidy.",
-    "docs": ["10th Marksheet", "Aadhaar Card", "Income Certificate", "Caste Certificate"],
-    "doc_images": {
-      "10th Marksheet": "https://img.icons8.com/color/144/diploma.png",
-      "Aadhaar Card": "https://img.icons8.com/color/144/identity-matching.png",
-      "Income Certificate": "https://img.icons8.com/color/144/rupee.png",
-      "Caste Certificate": "https://img.icons8.com/color/144/groups.png"
-    }
-  },
-  {
-    "name": "UP Old Age Pension (Revised)",
-    "min_age": 60,
-    "max_income": 56460,
-    "benefit": "Monthly pension of ₹1000 transferred directly to the bank accounts of elderly citizens.",
-    "docs": ["Aadhaar Card", "Bank Passbook", "Age Certificate"],
+    "benefit": "90% subsidy for small farmers to install solar irrigation pumps, ensuring free electricity for farming.",
+    "docs": ["Aadhaar Card", "Land Papers", "Bank Passbook", "Passport Size Photo"],
     "doc_images": {
       "Aadhaar Card": "https://img.icons8.com/color/144/identity-matching.png",
+      "Land Papers": "https://img.icons8.com/color/144/land-sales.png",
       "Bank Passbook": "https://img.icons8.com/color/144/bank-card-backside.png",
-      "Age Certificate": "https://img.icons8.com/color/144/calendar.png"
+      "Passport Size Photo": "https://img.icons8.com/color/144/camera.png"
     }
   },
   {
-    "name": "UP Berojgari Bhatta 2025",
-    "min_age": 21,
-    "max_income": 300000,
-    "benefit": "Financial assistance of ₹1,000 to ₹1,500 per month for unemployed graduates.",
-    "docs": ["Graduation Degree", "Aadhaar Card", "Income Certificate", "Employment Reg. Certificate"],
+    "name": "One District One Product (ODOP) Training",
+    "min_age": 18,
+    "max_income": 600000,
+    "benefit": "Financial help and marketing support for Agra's leather and footwear industry workers.",
+    "docs": ["Aadhaar Card", "Residence Proof", "Project Report", "Udyam Registration"],
     "doc_images": {
-      "Graduation Degree": "https://img.icons8.com/color/144/student-registration.png",
       "Aadhaar Card": "https://img.icons8.com/color/144/identity-matching.png",
-      "Income Certificate": "https://img.icons8.com/color/144/rupee.png",
-      "Employment Reg. Certificate": "https://img.icons8.com/color/144/checked-identification-documents.png"
+      "Residence Proof": "https://img.icons8.com/color/144/home.png",
+      "Project Report": "https://img.icons8.com/color/144/document.png",
+      "Udyam Registration": "https://img.icons8.com/color/144/checked-identification-documents.png"
     }
   }
 ]
